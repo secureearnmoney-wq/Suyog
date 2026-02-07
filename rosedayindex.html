@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Rose Day Nayan 🌹</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', cursive;
+        background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+        color: #fff;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    section {
+        min-height: 100vh;
+        padding: 60px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+        max-width: 700px;
+        line-height: 1.6;
+    }
+
+    .rose {
+        font-size: 60px;
+        animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0); }
+    }
+
+    button {
+        background: #ff4d6d;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1em;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        background: #ff1e4d;
+    }
+
+    .heart {
+        position: fixed;
+        color: red;
+        font-size: 20px;
+        animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(-10vh); opacity: 1; }
+        100% { transform: translateY(110vh); opacity: 0; }
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.9em;
+        opacity: 0.8;
+    }
+</style>
+</head>
+
+<body>
+
+<audio id="song" loop>
+    <source src="https://pagalworld.com.se/files/download/type/320/id/66407" type="audio/mpeg">
+</audio>
+
+<section>
+    <div class="rose">🌹</div>
+    <h1>Happy Rose Day</h1>
+    <h2>My Beautiful Nayan 💖</h2>
+    <p>
+        This rose is not just a flower, it’s a piece of my heart,  
+        filled with love, care, and endless smiles — just for you.
+    </p>
+    <button onclick="playSong()">Play Our Song 🎶</button>
+</section>
+
+<section>
+    <h1>Nayan 🌸</h1>
+    <p>
+        Every rose reminds me of you —  
+        soft, beautiful, and impossible to ignore.  
+        You color my world with happiness,  
+        and my heart blooms whenever you smile.
+    </p>
+</section>
+
+<section>
+    <h1>For You ❤️</h1>
+    <p>
+        I don’t need special days to love you,  
+        but today I just want to say it louder —
+    </p>
+    <h2>I Love You Nayan 💕</h2>
+    <p>
+        Forever, in every season,  
+        like roses that never fade.
+    </p>
+</section>
+
+<section>
+    <h1>One Last Thing 🌹</h1>
+    <p>
+        If I could give you one thing in life,  
+        it would be the ability to see yourself through my eyes —  
+        so you’d know how incredibly special you are to me.
+    </p>
+</section>
+
+<footer>
+    Made with ❤️ only for Nayan
+</footer>
+
+<script>
+function playSong() {
+    document.getElementById("song").play();
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+}
+
+setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
